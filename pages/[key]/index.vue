@@ -19,11 +19,11 @@
 const route = useRoute()
 
 const sheet = await $fetch('https://sheets.googleapis.com/v4/spreadsheets/1QGkH5j3ZNo3ms7YGFdYTeW2mEoWwxcnMy8bbEXgbVa0/values/notepad!A2:C?key='+route.params.key)
-const result = await sheet.values 
+const result = await sheet.values.reverse()
 let randomnumber = Math.floor(Math.random() * result.length)
 
 function pickRandom() {
-    randomnumber = Math.floor(Math.random() * result.length)
+    location.href = location.href
 }
 
 </script>
